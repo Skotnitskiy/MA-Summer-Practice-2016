@@ -10,9 +10,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 
 
-def update_create():
+def update_create(id_q):
     js_question = request.json
-    number = request.args.get('num')
+    if id_q == None:
+        number = request.args.get('num')
+    else:
+        number = id_q
     body = Test.query.first().body
     body['main-questions'].update({number: js_question})
     test = Test.query.first()
@@ -27,27 +30,27 @@ class MainQuestions(Resource):
         return Test.query.first().body['main-questions']
 
     def post(self):
-        update_create()
+        update_create(None)
         return redirect('/questions')
 
-    def put(self):
-        update_create()
-        pass
 
-    def delete(self):
-        key = request.args.get('num')
+
+class MainQuestion(Resource):
+    def get(self, id_question):
+        return Test.query.first().body['main-questions'][id_question]
+
+    def delete(self, id_question):
         body = Test.query.first().body
-        body['main-questions'].pop(key, None)
+        body['main-questions'].pop(id_question, None)
         test = Test.query.first()
         test.body = body
         dbs.add(test)
         dbs.commit()
         pass
 
-
-class MainQuestion(Resource):
-    def get(self, id_question):
-        return Test.query.first().body['main-questions'][id_question]
+    def put(self, id_question):
+        update_create(id_question)
+        pass
 
 
 api.add_resource(MainQuestions, '/questions')
