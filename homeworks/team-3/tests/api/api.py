@@ -34,6 +34,16 @@ class MainQuestions(Resource):
         update_create()
         pass
 
+    def delete(self):
+        key = request.args.get('num')
+        body = Test.query.first().body
+        body['main-questions'].pop(key, None)
+        test = Test.query.first()
+        test.body = body
+        dbs.add(test)
+        dbs.commit()
+        pass
+
 
 class MainQuestion(Resource):
     def get(self, id_question):
