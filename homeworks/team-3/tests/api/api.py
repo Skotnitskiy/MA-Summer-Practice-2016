@@ -1,8 +1,7 @@
 import os
 from flask import Flask, request, redirect
 from flask_restful import Resource, Api
-from testq import Test
-from database import db_session as dbs
+from common.test_service import get_main_questions, new_main_question, get_main_question, remove_main_question
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
@@ -10,47 +9,28 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 
 
-def update_create(id_q):
-    js_question = request.json
-    if id_q == None:
-        number = request.args.get('num')
-    else:
-        number = id_q
-    body = Test.query.first().body
-    body['main-questions'].update({number: js_question})
-    test = Test.query.first()
-    test.body = body
-    dbs.add(test)
-    dbs.commit()
-    pass
-
-
 class MainQuestions(Resource):
     def get(self):
-        return Test.query.first().body['main-questions']
+        id_test = request.args.get('tid')
+        return get_main_questions(id_test)
 
     def post(self):
-        update_create(None)
-        return redirect('/questions')
-
+        new_main_question(request)
+        pass
 
 
 class MainQuestion(Resource):
     def get(self, id_question):
-        return Test.query.first().body['main-questions'][id_question]
+        return get_main_question(request, id_question)
 
     def delete(self, id_question):
-        body = Test.query.first().body
-        body['main-questions'].pop(id_question, None)
-        test = Test.query.first()
-        test.body = body
-        dbs.add(test)
-        dbs.commit()
+        remove_main_question(id_question, request)
         pass
 
-    def put(self, id_question):
-        update_create(id_question)
-        pass
+
+# def put(self, id_question):
+#         update_create(id_question)
+#         pass
 
 
 api.add_resource(MainQuestions, '/questions')
