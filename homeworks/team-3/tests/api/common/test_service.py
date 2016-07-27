@@ -9,12 +9,12 @@ def get_main_questions(test_id):
 
 def new_main_question(id_test):
     key = request.args.get('key')
-    return update_create(id_test, key)
+    json_question = request.json
+    return update_create(id_test, key, json_question)
 
 
 def get_main_question(id_test, id_q):
-    json_question = request.json
-    return acquire_main_question(id_test, id_q, json_question)
+    return acquire_main_question(id_test, id_q)
 
 
 def remove_main_question(id_test, id_q):
