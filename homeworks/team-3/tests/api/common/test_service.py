@@ -13,7 +13,8 @@ def new_main_question(id_test):
 
 
 def get_main_question(id_test, id_q):
-    return acquire_main_question(id_test, id_q)
+    json_question = request.json
+    return acquire_main_question(id_test, id_q, json_question)
 
 
 def remove_main_question(id_test, id_q):
@@ -22,4 +23,5 @@ def remove_main_question(id_test, id_q):
 
 
 def update_main_question(id_test, id_q):
-    return update_create(id_test, id_q)
+    json_question = request.json
+    return update_create(id_test, id_q, json_question)

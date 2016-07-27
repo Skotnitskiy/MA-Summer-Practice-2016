@@ -1,12 +1,10 @@
-from flask import request
 from .test import Test
 from database import db_session as dbs
 
 
-def update_create(id_test, id_q):
-    js_question = request.json
+def update_create(id_test, id_q, json_question):
     body = Test.query.filter_by(id=id_test).first().body
-    body['main-questions'].update({id_q: js_question})
+    body['main-questions'].update({id_q: json_question})
     test = Test.query.filter_by(id=id_test).first()
     test.body = body
     dbs.add(test)
@@ -18,8 +16,8 @@ def main_questions(test_id):
     return Test.query.filter_by(id=test_id).first().body['main-questions']
 
 
-def main_question(test_id, id_question):
-    return update_create(test_id, id_question)
+def main_question(test_id, id_question, json_question):
+    return update_create(test_id, id_question, json_question)
 
 
 def acquire_main_question(test_id, id_question):
