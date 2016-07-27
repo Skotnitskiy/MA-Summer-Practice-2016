@@ -8,8 +8,8 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = Api(app)
 
-api.add_resource(MainQuestions, '/questions')
-api.add_resource(MainQuestion, '/questions/<id_question>')
+api.add_resource(MainQuestions, '/tests/<id_test>/questions')
+api.add_resource(MainQuestion, '/tests/<id_test>/questions/<id_question>')
 
 if __name__ == '__main__':
     app.run()

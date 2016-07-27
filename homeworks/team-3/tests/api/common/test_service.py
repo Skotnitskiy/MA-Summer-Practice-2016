@@ -1,3 +1,5 @@
+from flask import request
+
 from .test_crud import main_questions, update_create, acquire_main_question, delete_main_question
 
 
@@ -5,22 +7,19 @@ def get_main_questions(test_id):
     return main_questions(test_id)
 
 
-def new_main_question(request):
-    id_test = request.args.get('tid')
-    return update_create(id_test, None)
+def new_main_question(id_test):
+    key = request.args.get('key')
+    return update_create(id_test, key)
 
 
-def get_main_question(request, id_q):
-    id_test = request.args.get('tid')
+def get_main_question(id_test, id_q):
     return acquire_main_question(id_test, id_q)
 
 
-def remove_main_question(id_question, request):
-    id_test = request.args.get('tid')
-    delete_main_question(id_test, id_question)
+def remove_main_question(id_test, id_q):
+    delete_main_question(id_test, id_q)
     pass
 
 
-def update_main_question(request, id_q):
-    id_test = request.args.get('tid')
+def update_main_question(id_test, id_q):
     return update_create(id_test, id_q)
