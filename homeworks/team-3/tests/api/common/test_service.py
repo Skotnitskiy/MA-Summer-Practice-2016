@@ -19,3 +19,8 @@ def remove_main_question(id_question, request):
     id_test = request.args.get('tid')
     delete_main_question(id_test, id_question)
     pass
+
+
+def update_main_question(request, id_q):
+    id_test = request.args.get('tid')
+    return update_create(id_test, id_q)
