@@ -8,6 +8,7 @@ class Test(Base):
 
     id = Column(Integer, primary_key=True)
     body = Column(JSONB)
+    title = Column(String)
 
     def __init__(self, body):
         self.body = body
