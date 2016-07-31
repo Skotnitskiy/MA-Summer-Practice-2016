@@ -33,11 +33,23 @@ def delete_main_question(test_id, id_question):
     dbs.commit()
     pass
 
+
 def tests_all():
     return Test.query.all()
+
 
 def test_save(title, body):
     test = Test(title, body)
     dbs.add(test)
     dbs.commit()
     pass
+
+
+def test(id_test):
+    return Test.query.filter_by(id=id_test).first().body
+
+
+def delete_test(id_test):
+    test = Test.query.filter_by(id=id_test).first()
+    dbs.delete(test)
+    dbs.commit()

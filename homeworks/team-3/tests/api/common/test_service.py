@@ -1,6 +1,13 @@
 from flask import request
 
-from .test_crud import main_questions, update_create, acquire_main_question, delete_main_question, tests_all, test_save
+from .test_crud import (main_questions,
+                        update_create,
+                        acquire_main_question,
+                        delete_main_question,
+                        tests_all,
+                        test_save,
+                        test,
+                        delete_test)
 
 
 def get_main_questions(test_id):
@@ -26,10 +33,21 @@ def update_main_question(id_test, id_q):
     json_question = request.json
     return update_create(id_test, id_q, json_question)
 
+
 def get_tests():
     return tests_all()
+
 
 def new_test():
     title = request.args.get('title')
     body = request.json
     return test_save(title, body)
+
+
+def get_test(id_test):
+    return test(id_test)
+
+
+def remove_test(id_test):
+    delete_test(id_test)
+    pass
