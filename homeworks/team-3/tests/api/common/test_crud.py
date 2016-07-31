@@ -32,3 +32,12 @@ def delete_main_question(test_id, id_question):
     dbs.add(test)
     dbs.commit()
     pass
+
+def tests_all():
+    return Test.query.all()
+
+def test_save(title, body):
+    test = Test(title, body)
+    dbs.add(test)
+    dbs.commit()
+    pass

@@ -13,11 +13,12 @@ class Test(Base):
     body = Column(JSONB)
     title = Column(String)
 
-    def __init__(self, body):
+    def __init__(self, title, body):
+        self.title = title
         self.body = body
 
         def __repr__(self):
-            return '<Test %r>' % self.body
+            return '<Test %d %r %r>' % (self.id, self.title, self.body)
 
 
 roles_users = Table('roles_users', Base.metadata,

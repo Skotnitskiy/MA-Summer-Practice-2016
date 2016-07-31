@@ -17,6 +17,6 @@ def init_db():
     from common.models import User
     Base.metadata.create_all(bind=engine)
     body = {"main-questions": {}, "next": {}}
-    init_test = Test(body)
+    init_test = Test("First title", body)
     db_session.add(init_test)
     db_session.commit()
