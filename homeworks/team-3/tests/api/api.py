@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask
 from unicode_api import UnicodeApi
 from route_classes.questions import MainQuestions, MainQuestion
 
@@ -8,12 +8,5 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 api = UnicodeApi(app, prefix='/api/v1')
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
 api.add_resource(MainQuestions, '/tests/<id_test>/questions')
 api.add_resource(MainQuestion, '/tests/<id_test>/questions/<id_question>')
-
-if __name__ == '__main__':
-    app.run()

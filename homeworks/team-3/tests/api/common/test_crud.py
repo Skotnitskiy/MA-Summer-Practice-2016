@@ -1,4 +1,4 @@
-from .test import Test
+from .models import Test
 from database import db_session as dbs
 
 
