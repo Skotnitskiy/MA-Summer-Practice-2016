@@ -13,7 +13,7 @@ from .test_crud import (main_questions,
                         create_subtest,
                         subtest,
                         delete_subtest,
-                        save_sub_questions, subtest_results)
+                        save_sub_questions, subtest_results, subtest_result)
 
 
 def get_main_questions(test_id):
@@ -58,13 +58,16 @@ def remove_test(id_test):
     delete_test(id_test)
     pass
 
+
 def new_main_questions(id_test):
     main_qs = request.json
     save_main_questions(id_test, main_qs)
     pass
 
+
 def get_subtests(id_test):
     return subtests(id_test)
+
 
 def new_subtest(id_test):
     subtest_key = request.args.get('subtest_key')
@@ -86,5 +89,15 @@ def new_sub_questions(id_test, subtest_key):
     save_sub_questions(id_test, subtest_key, sub_qs)
     pass
 
+
 def get_subtest_results(id_test, subtest_key):
     return subtest_results(id_test, subtest_key)
+
+def get_subtest_result(id_test, subtest_key, person_key):
+    return subtest_result(id_test, subtest_key, person_key)
+
+def new_subtest_results(id_test, subtest_key):
+    pass
+
+def remove_subtest_result(id_test, subtest_key, person_key):
+    pass

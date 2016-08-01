@@ -99,3 +99,6 @@ def save_sub_questions(id_test, subtest_key, sub_qs):
 
 def subtest_results(id_test, subtest_key):
     return Test.query.filter_by(id=id_test).first().body['next'][subtest_key]['results']
+
+def subtest_result(id_test, subtest_key, person_key):
+    return Test.query.filter_by(id=id_test).first().body['next'][subtest_key]['results'][person_key]
