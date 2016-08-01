@@ -1,10 +1,9 @@
 //ajax request methods
-var $ = {
-	xhr : new XMLHttpRequest();
-};
+var $ = {};
 $.get = function(url,cb){
 	var res = url+'res';
-	$.xhr.open('GET', encodeURI(url));
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', encodeURI(url));
 	xhr.onload = function() {
 	    if (xhr.status === 200) {
 	    	cb(xhr.responseText);
