@@ -1,563 +1,100 @@
 {
   "main-questions": {
     "1": {
-      "body": "",
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
+      "body": "Drink or not to drink?",
+      "answers": {
+        "1": {
+          "ekonomika": "0",
+          "answer": "To drink beer."
+        },
+        "2": {
+          "dizain": "0",
+          "answer": "To drink coffee."
+        }
+      }
     },
     "2": {
-       "body": "",
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "3": {
-       "body": "",
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "4": {
-       "body": "",
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "5": { 
-      "body": "",
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]},
-    "6": {
-       "body": "",
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
+      "body": "Question ?",
+      "answers": {
+        "1": {
+          "dizain": "0",
+          "answer": "To drink water."
+        },
+        "2": {
+          "ekonomika": "0",
+          "answer": "To drink tea."
+        }
+      }
     }
   },
-  "next":{
+  "next": {
     "dizain": {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
+      "questions": {
+        "1": {
+          "body": "Drink or not to drink?",
+          "answers": {
+            "1": {
+              "Bill": "0",
+              "answer": "To drink beer."
+            },
+            "2": {
+              "Steev": "0",
+              "answer": "To drink coffee."
+            }
+          }
+        },
+        "2": {
+          "body": "Question ?",
+          "answers": {
+            "1": {
+              "Bill": "0",
+              "answer": "To drink water."
+            },
+            "2": {
+              "Steev": "0",
+              "answer": "To drink tea."
+            }
+          }
+        }
       },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
+      "results": {
+        "Bill": "Bill said, you will be as I",
+        "Steev": "Steve said, you will be as I"
       }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
     },
     "ekonomika": {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
+      "questions": {
+        "1": {
+          "body": "Drink or not to drink?",
+          "answers": {
+            "1": {
+              "Steev": "0",
+              "answer": "To drink beer."
+            },
+            "2": {
+              "Bill": "0",
+              "answer": "To drink coffee."
+            }
+          }
+        },
+        "2": {
+          "body": "Question ?",
+          "answers": {
+            "1": {
+              "Bill": "0",
+              "answer": "To drink water."
+            },
+            "2": {
+              "Steev": "0",
+              "answer": "To drink tea."
+            }
+          }
+        }
       },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
+      "results": {
+        "Bill": "Bill said, you will be as I",
+        "Steev": "Steve said, you will be as I"
       }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "injir":  {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "komp-injir":  {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "marketing":  {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "oblik":  {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "pidpriemstwo":  {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
-    },
-    "finansi":  {
-      "body": {
-      "1": {
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "2": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "3": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "4": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      },
-      "5": { 
-        "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]},
-      "6": {
-         "body": "",
-        "answers":[
-          "",
-          "",
-          "",
-          ""
-          ]
-      }
-  },
-      "answers":[
-        "",
-        "",
-        "",
-        ""
-        ]
     }
   }
 }
