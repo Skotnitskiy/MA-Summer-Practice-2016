@@ -1,18 +1,13 @@
 //ajax request methods
 var $ = {};
 $.get = function(url,cb){
-	var res = url+'res';
-	var xhr = new XMLHttpRequest();
-	xhr.open('GET', encodeURI(url));
-	xhr.onload = function() {
-	    if (xhr.status === 200) {
-	    	cb(xhr.responseText);
-	    }
-	    else {
-	        alert('Request failed.  Returned status of ' + xhr.status);
-	    }
-	};
-	//return res;
+   	var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            cb((JSON.parse(xmlHttp.responseText)));
+    };
+    xmlHttp.open("GET", url, true); // true for asynchronous
+    xmlHttp.send(null);
 }
 $.post = function(url,data,cb){}
 $.put = function(url,data,cb){}
