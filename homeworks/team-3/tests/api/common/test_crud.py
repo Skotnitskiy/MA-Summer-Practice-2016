@@ -78,3 +78,12 @@ def create_subtest(id_test, subtest_key):
 
 def subtest(id_test, subtest_key):
     return Test.query.filter_by(id=id_test).first().body['next'][subtest_key]
+
+def delete_subtest(id_test, subtest_key):
+    body = Test.query.filter_by(id=id_test).first().body
+    body['next'].pop(subtest_key, id_test)
+    test = Test.query.filter_by(id=id_test).first()
+    test.body = body
+    dbs.add(test)
+    dbs.commit()
+    pass

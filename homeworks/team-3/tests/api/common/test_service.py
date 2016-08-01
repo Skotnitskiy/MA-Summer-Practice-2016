@@ -11,7 +11,7 @@ from .test_crud import (main_questions,
                         save_main_questions,
                         subtests,
                         create_subtest,
-                        subtest)
+                        subtest, delete_subtest)
 
 
 def get_main_questions(test_id):
