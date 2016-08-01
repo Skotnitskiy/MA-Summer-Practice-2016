@@ -7,7 +7,7 @@ from .test_crud import (main_questions,
                         tests_all,
                         test_save,
                         test,
-                        delete_test, save_main_questions, subtests)
+                        delete_test, save_main_questions, subtests, create_subtest)
 
 
 def get_main_questions(test_id):
