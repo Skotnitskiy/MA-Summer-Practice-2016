@@ -18,6 +18,6 @@ class SubTest(Resource):
         remove_subtest(id_test, subtest_key)
         pass
 
-    def post(self, id_test):
-        new_sub_questions(id_test)
+    def post(self, id_test, subtest_key):
+        new_sub_questions(id_test,  subtest_key)
         pass

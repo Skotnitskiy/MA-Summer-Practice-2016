@@ -87,3 +87,12 @@ def delete_subtest(id_test, subtest_key):
     dbs.add(test)
     dbs.commit()
     pass
+
+def save_sub_questions(id_test, subtest_key, sub_qs):
+    body = Test.query.filter_by(id=id_test).first().body
+    body['next'][subtest_key]['questions'].update(sub_qs)
+    test = Test.query.filter_by(id=id_test).first()
+    test.body = body
+    dbs.add(test)
+    dbs.commit()
+    pass
