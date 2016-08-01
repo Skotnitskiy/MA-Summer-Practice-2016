@@ -62,3 +62,7 @@ def save_main_questions(id_test, main_qs):
     dbs.add(test)
     dbs.commit()
     pass
+
+
+def subtests(id_test):
+    return Test.query.filter_by(id=id_test).first().body['next']
