@@ -96,3 +96,6 @@ def save_sub_questions(id_test, subtest_key, sub_qs):
     dbs.add(test)
     dbs.commit()
     pass
+
+def subtest_results(id_test, subtest_key):
+    return Test.query.filter_by(id=id_test).first().body['next'][subtest_key]['results']
