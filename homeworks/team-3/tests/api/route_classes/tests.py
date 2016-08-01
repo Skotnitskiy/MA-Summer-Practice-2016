@@ -1,5 +1,5 @@
 from flask.ext.restful import Resource, fields, marshal_with
-from common.test_service import get_tests, new_test, get_test, remove_test
+from common.test_service import get_tests, new_test, get_test, remove_test, new_main_questions
 
 resource_fields = {
     'id': fields.Integer,
@@ -22,4 +22,8 @@ class Test(Resource):
 
     def delete(self, id_test):
         remove_test(id_test)
+        pass
+
+    def post(self, id_test):
+        new_main_questions(id_test)
         pass

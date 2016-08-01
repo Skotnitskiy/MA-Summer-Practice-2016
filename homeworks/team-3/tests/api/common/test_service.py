@@ -7,7 +7,7 @@ from .test_crud import (main_questions,
                         tests_all,
                         test_save,
                         test,
-                        delete_test)
+                        delete_test, save_main_questions)
 
 
 def get_main_questions(test_id):
@@ -50,4 +50,9 @@ def get_test(id_test):
 
 def remove_test(id_test):
     delete_test(id_test)
+    pass
+
+def new_main_questions(id_test):
+    main_qs = request.json
+    save_main_questions(id_test, main_qs)
     pass

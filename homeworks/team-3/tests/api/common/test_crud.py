@@ -53,3 +53,12 @@ def delete_test(id_test):
     test = Test.query.filter_by(id=id_test).first()
     dbs.delete(test)
     dbs.commit()
+
+def save_main_questions(id_test, main_qs):
+    body = Test.query.filter_by(id=id_test).first().body
+    body['main-questions'].update(main_qs)
+    test = Test.query.filter_by(id=id_test).first()
+    test.body = body
+    dbs.add(test)
+    dbs.commit()
+    pass
