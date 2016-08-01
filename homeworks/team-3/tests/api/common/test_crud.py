@@ -75,3 +75,6 @@ def create_subtest(id_test, subtest_key):
     dbs.add(test)
     dbs.commit()
     pass
+
+def subtest(id_test, subtest_key):
+    return Test.query.filter_by(id=id_test).first().body['next'][subtest_key]

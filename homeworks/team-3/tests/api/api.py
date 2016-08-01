@@ -3,7 +3,7 @@ from flask import Flask
 from unicode_api import UnicodeApi
 from route_classes.questions import MainQuestions, MainQuestion
 from route_classes.tests import Tests, Test
-from route_classes.subtests import SubTests
+from route_classes.subtests import SubTests, SubTest
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
@@ -15,3 +15,4 @@ api.add_resource(MainQuestion, '/tests/<id_test>/questions/<id_question>')
 api.add_resource(Tests, '/tests')
 api.add_resource(Test, '/tests/<id_test>', '/tests/<id_test>/main-questions')
 api.add_resource(SubTests, '/tests/<id_test>/subtests')
+api.add_resource(SubTest, '/tests/<id_test>/subtests/<subtest_key>')
