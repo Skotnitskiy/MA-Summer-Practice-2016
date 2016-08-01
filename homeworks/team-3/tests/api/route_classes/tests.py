@@ -16,6 +16,7 @@ class Tests(Resource):
         new_test()
         pass
 
+
 class Test(Resource):
     def get(self, id_test):
         return get_test(id_test)

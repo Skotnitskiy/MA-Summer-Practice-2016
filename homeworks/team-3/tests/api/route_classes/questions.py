@@ -6,6 +6,7 @@ from common.test_service import (get_main_questions,
                                  update_main_question
                                  )
 
+
 class MainQuestions(Resource):
     def get(self, id_test):
         return get_main_questions(id_test)
@@ -26,4 +27,3 @@ class MainQuestion(Resource):
     def put(self, id_test, id_question):
         update_main_question(id_test, id_question)
         pass
-

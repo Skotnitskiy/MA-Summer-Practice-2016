@@ -10,6 +10,7 @@ class SubTests(Resource):
         new_subtest(id_test)
         pass
 
+
 class SubTest(Resource):
     def get(self, id_test, subtest_key):
         return get_subtest(id_test, subtest_key)
@@ -19,5 +20,5 @@ class SubTest(Resource):
         pass
 
     def post(self, id_test, subtest_key):
-        new_sub_questions(id_test,  subtest_key)
+        new_sub_questions(id_test, subtest_key)
         pass
