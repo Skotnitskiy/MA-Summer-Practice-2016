@@ -1,5 +1,5 @@
 from flask.ext.restful import Resource
-from common.test_service import get_subtests, new_subtest, get_subtest, remove_subtest, new_sub_questions
+from common.test_service import get_subtests, new_subtests, get_subtest, remove_subtest, new_sub_questions
 
 
 class SubTests(Resource):
@@ -7,7 +7,7 @@ class SubTests(Resource):
         return get_subtests(id_test)
 
     def post(self, id_test):
-        new_subtest(id_test)
+        new_subtests(id_test)
         pass
 
 

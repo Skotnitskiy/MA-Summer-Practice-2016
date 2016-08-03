@@ -69,9 +69,9 @@ def subtests(id_test):
     return Test.query.filter_by(id=id_test).first().body['next']
 
 
-def create_subtest(id_test, subtest_key):
+def create_subtests(id_test, subtests):
     body = Test.query.filter_by(id=id_test).first().body
-    body['next'].update({subtest_key: {"results": {}, "questions": {}}})
+    body['next'].update(subtests)
     test = Test.query.filter_by(id=id_test).first()
     test.body = body
     dbs.add(test)
