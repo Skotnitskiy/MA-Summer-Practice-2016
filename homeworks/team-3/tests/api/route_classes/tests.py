@@ -13,8 +13,7 @@ class Tests(Resource):
         return get_tests()
 
     def post(self):
-        new_test()
-        pass
+        return new_test()
 
 
 class Test(Resource):
