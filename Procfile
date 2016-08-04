@@ -1,1 +1,1 @@
-heroku: run python run.py --run wordcount-stage
+web: run python run.py
