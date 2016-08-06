@@ -1,1 +1,1 @@
-web: run python run.py --host="psyc-tests.herokuapp.com"
+web: run python run.py --host=91.244.44.254
