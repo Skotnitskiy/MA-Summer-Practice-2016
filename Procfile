@@ -1,1 +1,1 @@
-web: run python run.py
+web: run python run.py --host="psyc-tests.herokuapp.com"
