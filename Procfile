@@ -1,1 +1,1 @@
-web: python run.py runserver psyc-tests.herokuapp.com
+web: run python run.py
