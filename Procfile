@@ -1,1 +1,1 @@
-web: python run.py runserver psyc-tests.herokuapp.com:5000
+web: python run.py runserver psyc-tests.herokuapp.com
